@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand: #b90124;
+  --color-brand-dark: #8f0020;
+  --color-brand-soft: #ffc9d3;
+  --color-teal: #60bab1;
+  --color-teal-light: #90ccd0;
+  --color-teal-tint: #bee2e4;
+  --color-gold: #c09d59;
+  --color-ink: #1c1c1c;
+  --color-ink-soft: #404040;
+  --color-muted: #707070;
+
+  --font-body: "Poppins", sans-serif;
+  --font-nav: "Barlow", sans-serif;
+  --font-display: "Playfair Display", serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+}
