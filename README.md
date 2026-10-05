@@ -1,16 +1,54 @@
-# React + Vite
+# Tulas International School (TIS) - Homepage Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated redesign of the Tulas International School homepage focusing on high conversion, fluid animations, and mobile responsiveness.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+- **Live URL:** YOUR-LIVE-URL
+- **Repository:** https://github.com/AlekhyaHub/tis-homepage-redesign
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- **Framework:** React 19 with Vite
+- **Styling:** Tailwind CSS v4 (brand colors and fonts defined as theme tokens)
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Deployment:** Vercel
 
-## React Compiler
+## ✨ Standout Features Implemented
+1. **Animated Dark/Light Theme Switcher:** A custom `useTheme` hook toggles the `dark` class on `<html>`, saves the choice in `localStorage`, and falls back to the system preference on first visit. The switch knob is animated with Framer Motion (`layout` + spring) and exposes `role="switch"` and `aria-checked` for accessibility.
+2. **Scroll Progress Bar:** A fixed gold bar at the top of the viewport driven by Framer Motion's `useScroll` and `useSpring`. It animates `scaleX` (a GPU-friendly transform), so it stays smooth without triggering layout.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Getting Started Locally
 
-## Expanding the ESLint configuration
+1. **Clone the repository:**
+```bash
+   git clone https://github.com/AlekhyaHub/tis-homepage-redesign.git
+   cd tis-homepage-redesign
+```
+2. **Install dependencies:**
+```bash
+   npm install
+```
+3. **Run the development server:**
+```bash
+   npm run dev
+```
+4. Open http://localhost:5173 in your browser.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Other scripts: `npm run build` (production build) and `npm run lint` (ESLint).
+
+## 🧱 Component Architecture Overview
+- `components/ui/` - Reusable primitives (`Button`, `Card`, `SectionHeading`)
+- `components/layout/` - `Navbar` (with mobile menu) and `Footer`
+- `components/sections/` - Page sections (`HeroSection`, `StatsSection`, `SportsSection`, `EnquirySection`)
+- `components/animation/` - `ScrollProgress` and `ThemeToggle`
+- `hooks/` - `useTheme`
+- `data/` - Static content (navigation, contact details, stats, sports) kept separate from UI
+
+## 🎨 Brand Identity Retained
+- Crimson `#b90124`, teal `#60bab1` and gold `#c09d59` taken from tis.edu.in
+- Copy, contact details, logo and photos come from tis.edu.in
+- The original site uses licensed fonts (TT Chocolates, PF DIN). Open-source alternatives are used instead: Poppins, Barlow and Playfair Display.
+
+## 📝 Notes
+- The enquiry form validates input in the browser and shows a confirmation message. It does not send data to a server.
+- Images are sourced from tis.edu.in for this assessment.
