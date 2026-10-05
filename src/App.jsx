@@ -1,4 +1,5 @@
 import Navbar from "./components/layout/Navbar";
+import ScrollProgress from "./components/animation/ScrollProgress";
 import HeroSection from "./components/sections/HeroSection";
 import SectionHeading from "./components/ui/SectionHeading";
 import Card from "./components/ui/Card";
@@ -7,6 +8,7 @@ import { stats } from "./data/stats";
 function App() {
   return (
     <>
+      <ScrollProgress />
       <Navbar />
       <main>
         <HeroSection />
@@ -24,6 +26,9 @@ function App() {
             ))}
           </div>
         </section>
+
+        {/* Temporary spacer to test the progress bar. Delete later. */}
+        <div className="h-[150vh]" />
       </main>
     </>
   );
