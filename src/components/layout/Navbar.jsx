@@ -1,3 +1,5 @@
+import ThemeToggle from "../animation/ThemeToggle";
+
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import logo from "../../assets/logo.png";
@@ -27,6 +29,7 @@ function Navbar() {
           >
             Enquire Now
           </a>
+          <ThemeToggle />
         </div>
       </div>
 

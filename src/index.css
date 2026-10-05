@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-brand: #b90124;
   --color-brand-dark: #8f0020;
@@ -17,7 +19,19 @@
   --font-display: "Playfair Display", serif;
 }
 
+:root {
+  --surface: #ffffff;
+  --fg: #1c1c1c;
+}
+
+.dark {
+  --surface: #121212;
+  --fg: #f2f2f2;
+}
+
 body {
   font-family: var(--font-body);
-  color: var(--color-ink);
+  background-color: var(--surface);
+  color: var(--fg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

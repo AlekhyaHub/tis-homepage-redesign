@@ -3,7 +3,7 @@ function SectionHeading({ title, subtitle, light = false }) {
     <div className="text-center mb-10">
       <h2
         className={`text-3xl md:text-5xl font-bold ${
-          light ? "text-white" : "text-brand"
+          light ? "text-white" : "text-brand dark:text-brand-soft"
         }`}
       >
         {title}
@@ -11,7 +11,7 @@ function SectionHeading({ title, subtitle, light = false }) {
       {subtitle && (
         <p
           className={`mt-3 text-base md:text-lg ${
-            light ? "text-white/80" : "text-ink-soft"
+            light ? "text-white/80" : "text-ink-soft dark:text-white/70"
           }`}
         >
           {subtitle}
